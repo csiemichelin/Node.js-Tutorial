@@ -3,4 +3,4 @@
 ## 環境建置
 1. [安裝Node.js](https://nodejs.org/en)  
 &emsp; * 默認安裝即可  
-3. 
+3. 終端機輸入node -v查看Node.js的版本
