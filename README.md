@@ -5,5 +5,7 @@
 &emsp; * 默認安裝即可  
 2. 終端機輸入node -v查看Node.js的版本   
 3. 在vscode中新增程式碼片段的設定   
-![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3cdb44cd-59d2-4e56-9949-72384c1ed14e)   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3cdb44cd-59d2-4e56-9949-72384c1ed14e)
+新增以下指令  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/600f24e1-2139-4383-896a-a04919b546f7)   
 
