@@ -25,7 +25,7 @@ const sendReponse = (filename, statusCode, response) => {
 const server = http.createServer((request, response) => {
     console.log(request.url, request.method) //request.url: 返回請求的url頁面，terminal會顯示現在是哪一個html頁面, request.method: 他會返回是http的甚麼請求(GET, POST, ...)
 
-    //GET: 獲取數據, POST: 提交數據
+    //GET: 獲取數據(html等), POST: 提交數據
     const method = request.method;
     let url = request.url;    //此url包括GET請求參數，但URL中的pathname就不包含請求參數
 
