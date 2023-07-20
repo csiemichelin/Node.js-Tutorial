@@ -1,7 +1,7 @@
 const http = require("http");
 
 const server = http.createServer((request, response) => {
-    response.end("Hello From NodeJS Server");   //把字串返回到前端
+    response.end("Hello From NodeJS Server");   //把字串從後端返回到前端
 }); //新增server監聽器去監聽有沒有客戶端發來的請求(request = 請求object, response = 響應object)
 
 const port = 3001;
