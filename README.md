@@ -5,6 +5,9 @@
 &emsp; * 默認安裝即可  
 2. 終端機輸入node -v查看Node.js的版本  
 3. 終端機輸入npm -v查看npm版本，他是用來管理Node.js的模組工具，通常安裝為Node.js就會自動幫你安裝npm    
+```
+code = os ;
+```
 4. vscode安裝以下幾個extension    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)   
 5. 在vscode中新增程式碼片段的設定   
