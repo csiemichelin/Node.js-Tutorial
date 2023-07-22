@@ -13,7 +13,7 @@ code package.json//會看到dependencies多了"express": "^4.18.2"
 cd node_modules  //會看到其他模塊因為express模塊也會用到其他模塊，也可觀察不同模塊的package.json
 npm uninstall express  //進行卸載
 ```   
-4. 安裝Node.js版本管理工具NVM(Node Version Manager)，來對不同版本的Node.js進行管理   
+4. 安裝Node.js版本管理工具[NVM(Node Version Manager)](https://github.com/nvm-sh/nvm)，來對不同版本的Node.js進行管理   
 5. vscode安裝以下幾個extension    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)   
 6. 在vscode中新增程式碼片段的設定   
