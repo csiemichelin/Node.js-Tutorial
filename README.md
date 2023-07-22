@@ -19,6 +19,7 @@ npm uninstall express  //進行卸載
 ```
 nvm version
 nvm ls //用來查看nvm中已經安裝的Node.js版本
+nvm ls available  //顯示官網上所有Node.js的版本
 ```   
 6. vscode安裝以下幾個extension    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)   
