@@ -1,5 +1,7 @@
 # Node.js-Tutorial
 這裡是自學Node.js後端技術的小小天地
+## 前言
+Node.js是一款開發Server後端很重要的應用程式，可以在上面跑JavaScript的程式   
 ## 環境建置
 1. [安裝Node.js](https://nodejs.org/en)  
 &emsp; * 默認安裝即可  
@@ -13,10 +15,26 @@ code package.json//會看到dependencies多了"express": "^4.18.2"
 cd node_modules  //會看到其他模塊因為express模塊也會用到其他模塊，也可觀察不同模塊的package.json
 npm uninstall express  //進行卸載
 ```   
-4. vscode安裝以下幾個extension    
-![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)   
-5. 在vscode中新增程式碼片段的設定   
-![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3cdb44cd-59d2-4e56-9949-72384c1ed14e)   
+4. [安裝Node.js版本管理工具NVM(Node Version Manager)，來對不同版本的Node.js進行管理](https://www.youtube.com/watch?v=YJdh2E4idmY&list=PL50akgsaBZlF9DADkYuQZLQBDLHZHZ-9N&index=8)  
+&emsp; * [Linux/MacOS NVM](https://github.com/nvm-sh/nvm)    
+&emsp; * [Windows NVM](https://github.com/coreybutler/nvm-windows)
+```
+nvm version
+nvm ls //用來查看nvm中已經安裝的Node.js版本
+nvm ls available  //顯示官網上所有Node.js的版本，盡量選擇LTS(Long Term Service)長期維護版本進行安裝   
+nvm install 20.4.0
+nvm use 20.4.0  //進行Node.js的版本切換
+```   
+5. vscode安裝以下幾個extension     
+
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)  
+6. 在vscode中新增程式碼片段的設定  
+
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3cdb44cd-59d2-4e56-9949-72384c1ed14e)  
+
 新增以下指令  
-![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/600f24e1-2139-4383-896a-a04919b546f7)   
+
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/600f24e1-2139-4383-896a-a04919b546f7)    　
+
+若要多行註解可以ctrl+／  
 
