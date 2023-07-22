@@ -13,12 +13,15 @@ code package.json//會看到dependencies多了"express": "^4.18.2"
 cd node_modules  //會看到其他模塊因為express模塊也會用到其他模塊，也可觀察不同模塊的package.json
 npm uninstall express  //進行卸載
 ```   
-4. [安裝Node.js版本管理工具NVM(Node Version Manager)，來對不同版本的Node.js進行管理](https://www.youtube.com/watch?v=YJdh2E4idmY&list=PL50akgsaBZlF9DADkYuQZLQBDLHZHZ-9N&index=8)   
+4. [安裝Node.js版本管理工具NVM(Node Version Manager)，來對不同版本的Node.js進行管理](https://www.youtube.com/watch?v=YJdh2E4idmY&list=PL50akgsaBZlF9DADkYuQZLQBDLHZHZ-9N&index=8)  
 &emsp; * [Linux/MacOS NVM](https://github.com/nvm-sh/nvm)    
-&emsp; * [Windows NVM](https://github.com/coreybutler/nvm-windows)    
-5. vscode安裝以下幾個extension    
+&emsp; * [Windows NVM](https://github.com/coreybutler/nvm-windows)
+```
+nvm version   
+```   
+6. vscode安裝以下幾個extension    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/72dc37c5-099b-4684-8d14-d9261af738f7)   
-6. 在vscode中新增程式碼片段的設定   
+7. 在vscode中新增程式碼片段的設定   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3cdb44cd-59d2-4e56-9949-72384c1ed14e)   
 新增以下指令  
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/600f24e1-2139-4383-896a-a04919b546f7)   
