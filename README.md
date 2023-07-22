@@ -21,7 +21,7 @@ npm uninstall express  //進行卸載
 ```
 nvm version
 nvm ls //用來查看nvm中已經安裝的Node.js版本
-nvm ls available  //顯示官網上所有Node.js的版本
+nvm ls available  //顯示官網上所有Node.js的版本，盡量選擇LTS(Long Term Service)長期維護版本進行安裝   
 nvm install 20.4.0
 nvm use 20.4.0  //進行Node.js的版本切換
 ```   
