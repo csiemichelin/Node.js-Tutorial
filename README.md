@@ -1,5 +1,7 @@
 # Node.js-Tutorial
 這裡是自學Node.js後端技術的小小天地
+## 前言
+Node.js是一款應用程式，可以在上面跑JavaScript的程式   
 ## 環境建置
 1. [安裝Node.js](https://nodejs.org/en)  
 &emsp; * 默認安裝即可  
