@@ -36,6 +36,8 @@ nvm use 20.4.0  //進行Node.js的版本切換
 
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/600f24e1-2139-4383-896a-a04919b546f7)    　
 
-若要多行註解可以ctrl+／  
+若要多行註解可以ctrl+／    
+7. 安裝Fiddler，它是一個用於查看和分析HTTP以及HTTPS流量的網絡調試工具，可用來窺探HTTP封包   
+
 
 
