@@ -1,7 +1,7 @@
 //流式讀取適用於處理大量數據或者數據流，使系統不需要等待所有數據都加載完畢才能開始處理，從而提高了數據處理的效率
 const fs = require('fs');
 
-const rs = fs.createReadStream('./彩虹貓-rainbow.gif');   //創建讀取流對象
+const rs = fs.createReadStream('./資料/彩虹貓-rainbow.gif');   //創建讀取流對象
 
 //綁定daata事件
 rs.on('data', (chunk) => {  //chunk(大塊)為回調函數，也就是每當讀取一小塊資料後，要採取的相對應動作

@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 //非同步讀取(多行註解CTRL + /)
-// fs.readFile('./觀書有感.txt', (err, data) => {
+// fs.readFile('./資料/觀書有感.txt', (err, data) => {
 //     if (err) {
 //         console.log("讀取失敗~~\n");
 //         return;
@@ -10,6 +10,6 @@ const fs = require('fs');
 // });
 
 //同步讀取
-let data = fs.readFileSync("./觀書有感.txt");
+let data = fs.readFileSync("./資料/觀書有感.txt");
 
 console.log(data.toString());

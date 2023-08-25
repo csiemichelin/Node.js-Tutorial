@@ -2,7 +2,7 @@
 
 const fs = require('fs');  //導入fs模塊
 
-const ws = fs.createWriteStream("./觀書有感.txt");  //創建寫入流對象
+const ws = fs.createWriteStream("./資料/觀書有感.txt");  //創建寫入流對象
 
 //對寫入流對象進行多次寫入
 ws.write("半畝方塘一鑑開\n");
