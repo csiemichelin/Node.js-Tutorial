@@ -41,5 +41,5 @@ nvm use 20.4.0  //進行Node.js的版本切換
 常見請求方法: (GET: 獲取數據, POST: 提交數據)    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/HTTP%E8%AB%8B%E6%B1%82.png)    　
 若想知道HTTP header各別所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers   
-若想知道HTTP 響應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS   
+若想知道HTTP響應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS   
 
