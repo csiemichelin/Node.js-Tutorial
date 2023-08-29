@@ -2,7 +2,7 @@ const http = require("http");
 
 const server = http.createServer((request, response) => {
     response.end("Hello From NodeJS Server");   //把字串從後端返回到前端
-}); //新增server監聽器去監聽有沒有客戶端發來的請求(request = 請求object, response = 響應object)
+}); //新增server監聽器去監聽有沒有客戶端發來的請求(request = 請求封包object, response = 響應封包object)
 
 const port = 3001;
 const ip = "140.123.97.154";
