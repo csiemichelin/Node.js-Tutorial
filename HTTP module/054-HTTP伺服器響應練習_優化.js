@@ -1,10 +1,13 @@
+//目標: 搭建HTTP服務，伺服器會響應一個4行3列的表格，並且要求表格有格行換色效果，且點擊單元格能高亮顯示
+
 const http = require('http');
+const fs = require('fs');
 
 //新增server監聽器去監聽有沒有客戶端發來的請求，(request = 請求封包object, response = 響應封包object)
 const server = http.createServer((request, response) => {
-    //response.end("Hello HTTP Server!"); //設置響應封包信息
-    response.setHeader('Content-Type', 'text/hmtl;charset=utf-8'); //設置響應封包的header格式，讓其可以顯示中文
-    response.end("你好 HTTP Server!");
+    //讀取HTML文件內容
+    let html = fs.readFileSync(__dirname + "/HTML/054-table.html");  //讀出來為buffer
+    response.end(html); //end參數可以是buffer，也可以是string
 });
 
 server.listen(9000, () => { //call back函數因為沒有參數所以只有一個括號

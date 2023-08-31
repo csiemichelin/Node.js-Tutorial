@@ -19,5 +19,5 @@ const server = http.createServer((request, response) => {
 
 server.listen(9000, () => { //call back函數因為沒有參數所以只有一個括號
     console.log("服務已經啟動...");
-});    //arg1:port, arg2:IP, arg3:call back函數(nodejs server啟動完畢後就會呼叫這個函數，顯示服務器運行的一些信息)
+});    //arg1:伺服器port, arg2:伺服器IP, arg3:call back函數(nodejs server啟動完畢後就會呼叫這個函數，顯示服務器運行的一些信息)
 //HTTP默認端口=80，HTTPS默認端口=443
