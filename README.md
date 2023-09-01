@@ -45,5 +45,6 @@ nvm use 20.4.0  //進行Node.js的版本切換
 &emsp;(3) 若想知道HTTP回應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS    
 &emsp;(4) 靜態資源是指伺服器運行時，長時間不發生的資源，例如: 圖片, 影片, CSS文件, JS文件, HTML文件, 字體文件等   
 &emsp;(5) 動態資源是指伺服器運行時，內容經常更新的資源，例如: Google頁面, 蝦皮搜索列表頁面等    
+&emsp;(6) 網頁中的URL絕對路徑: 可靠性強，而且容易理解，運用情況較多    
 
 
