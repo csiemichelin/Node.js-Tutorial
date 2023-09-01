@@ -40,7 +40,7 @@ nvm use 20.4.0  //進行Node.js的版本切換
 7. [安裝Fiddler](https://download.cnet.com/Fiddler/3000-2648_4-77541912.html)，它是一個用於查看和分析HTTP以及HTTPS流量的網絡調試工具，可用來窺探HTTP封包      
 8. 網頁基本知識   
 &emsp;(1) 常見請求方法: (GET: 獲取數據, POST: 提交數據)       
-&emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/HTTP%E8%AB%8B%E6%B1%82.png)    　
+&emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/HTTP%E8%AB%8B%E6%B1%82.png)    　
 &emsp;(2) 若想知道HTTP的每個請求或回應header所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers   
 &emsp;(3) 若想知道HTTP回應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS    
 &emsp;(4) 靜態資源是指伺服器運行時，長時間不發生的資源，例如: 圖片, 影片, CSS文件, JS文件, HTML文件, 字體文件等   
