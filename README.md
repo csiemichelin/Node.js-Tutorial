@@ -49,5 +49,6 @@ nvm use 20.4.0  //進行Node.js的版本切換
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91.png)        
 &emsp;(7) 網頁中的URL絕對路徑: 相對路徑在發送請求，需要與當前頁面的URL路徑進行計算，得到完整URL再發送請求，學習階段用的較多   
 &emsp;&emsp;假設當前頁面URL為http://www.atguigu.com/course/h5.html       
-&emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91.png)       
+&emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91.png)    
+&emsp;&emsp;最後一個例子是當處在最外層的目錄，就無法再往上一層了
 
