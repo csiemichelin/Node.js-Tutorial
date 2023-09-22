@@ -60,7 +60,7 @@ nvm use 20.4.0  //進行Node.js的版本切換
 mimi (Multipurpose Internet Mail Extensions) 類型為一種標準，用來表明文件, 字串等檔案格式  
 ```
 mime類型結構: [type]/[subType]
-例如: text/html text/css image/jpeg imeage/png application/json  
+例如: text/html, text/css, image/jpeg, imeage/png, application/json  
 ```
 可以透過設置HTTP響應頭的Content-Type來表明響應體的mimi類型，瀏覽器會根據該類型來決定如何處理資源  
 以下是常見文件對應的mimi類型  
