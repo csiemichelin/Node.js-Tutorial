@@ -39,17 +39,21 @@ nvm use 20.4.0  //進行Node.js的版本切換
 若要多行註解可以ctrl+／    
 7. [安裝Fiddler](https://download.cnet.com/Fiddler/3000-2648_4-77541912.html)，它是一個用於查看和分析HTTP以及HTTPS流量的網絡調試工具，可用來窺探HTTP封包      
 ## 網頁基本知識   
-### 常見請求方法: (GET: 獲取數據, POST: 提交數據)       
+### 1. 常見請求方法: (GET: 獲取數據, POST: 提交數據)       
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/HTTP%E8%AB%8B%E6%B1%82.png)    　
-### HTTP header   
+### 2. HTTP header   
 若想知道HTTP的每個請求或回應header所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers   
-### HTTP回應狀態碼  
+### 3. HTTP回應狀態碼  
 若想知道HTTP回應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS    
-4. 靜態資源是指伺服器運行時，長時間不發生的資源，例如: 圖片, 影片, CSS文件, JS文件, HTML文件, 字體文件等   
-5. 動態資源是指伺服器運行時，內容經常更新的資源，例如: Google頁面, 蝦皮搜索列表頁面等    
-6. 網頁中的URL絕對路徑: 可靠性強，而且容易理解，運用情況較多    
+### 4. 靜態資源   
+靜態資源是指伺服器運行時，長時間不發生的資源，例如: 圖片, 影片, CSS文件, JS文件, HTML文件, 字體文件等   
+### 5. 動態資源   
+動態資源是指伺服器運行時，內容經常更新的資源，例如: Google頁面, 蝦皮搜索列表頁面等    
+### 6. URL絕對路徑   
+網頁中的URL絕對路徑: 可靠性強，而且容易理解，運用情況較多    
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91.png)        
-7. 網頁中的URL相對路徑: 相對路徑在發送請求，需要與當前頁面的URL路徑進行計算，得到完整URL再發送請求學習階段用的較多，因為當前頁面的URL路徑若有問題，則相對路徑會錯誤，不建議使用假設當前頁面URL為http://www.atguigu.com/course/h5.html        
+### 7. URL相對路徑
+網頁中的URL相對路徑: 相對路徑在發送請求，需要與當前頁面的URL路徑進行計算，得到完整URL再發送請求學習階段用的較多，因為當前頁面的URL路徑若有問題，則相對路徑會錯誤，不建議使用假設當前頁面URL為http://www.atguigu.com/course/h5.html        
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91.png)    
 最後一個例子是當處在最外層的目錄，就無法再往上一層了
 
