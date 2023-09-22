@@ -63,7 +63,7 @@ mime類型結構: [type]/[subType]
 例如: text/html, text/css, image/jpeg, imeage/png, application/json  
 ```
 可以透過設置HTTP響應頭的Content-Type來表明響應體的mimi類型，瀏覽器會根據該類型來決定如何處理資源  
-以下是常見文件對應的mimi類型  
+以下是常見文件對應的mimi類型:  
 ```
 
 html: 'text/html',
@@ -76,4 +76,7 @@ mp4: 'video/mp4',
 mp3: 'audio/mpeg',
 json: 'application/json'
 
+```
+```
+若遇到未知得資源類型，可以選擇使用application/octet-stream類型，瀏覽器在遇到該類型的響應時，會對響應體內容進行獨立儲存，也就是我們常見的下載
 ```
