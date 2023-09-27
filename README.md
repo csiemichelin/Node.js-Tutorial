@@ -81,5 +81,5 @@ json: 'application/json'
 ```
 若遇到未知得資源類型，可以選擇使用application/octet-stream類型，瀏覽器在遇到該類型的響應時，會對響應體內容進行獨立儲存，也就是我們常見的下載
 ```
-### modular design  
+### Modular design  
 #### 1. 模組化   
