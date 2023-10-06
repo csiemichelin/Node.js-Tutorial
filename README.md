@@ -39,24 +39,25 @@ nvm use 20.4.0  //進行Node.js的版本切換
 若要多行註解可以ctrl+／    
 7. [安裝Fiddler](https://download.cnet.com/Fiddler/3000-2648_4-77541912.html)，它是一個用於查看和分析HTTP以及HTTPS流量的網絡調試工具，可用來窺探HTTP封包      
 ## 網頁基本知識   
-### 1. 常見請求方法: (GET: 獲取數據, POST: 提交數據)       
+### HTTP module   
+#### 1. 常見請求方法: (GET: 獲取數據, POST: 提交數據)       
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/HTTP%E8%AB%8B%E6%B1%82.png)    　
-### 2. HTTP header   
+#### 2. HTTP header   
 若想知道HTTP的每個請求或回應header所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers   
-### 3. HTTP回應狀態碼  
+#### 3. HTTP回應狀態碼  
 若想知道HTTP回應狀態碼所代表的含意，可去以下網址: https://developer.mozilla.org/en-US/docs/Web/HTTP/STATUS    
-### 4. 靜態資源   
+#### 4. 靜態資源   
 靜態資源是指伺服器運行時，長時間不發生的資源，例如: 圖片, 影片, CSS文件, JS文件, HTML文件, 字體文件等   
-### 5. 動態資源   
+#### 5. 動態資源   
 動態資源是指伺服器運行時，內容經常更新的資源，例如: Google頁面, 蝦皮搜索列表頁面等    
-### 6. URL絕對路徑   
+#### 6. URL絕對路徑   
 網頁中的URL絕對路徑: 可靠性強，而且容易理解，運用情況較多    
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%B5%95%E5%B0%8D%E8%B7%AF%E5%BE%91.png)        
-### 7. URL相對路徑
+#### 7. URL相對路徑
 網頁中的URL相對路徑: 相對路徑在發送請求，需要與當前頁面的URL路徑進行計算，得到完整URL再發送請求學習階段用的較多，因為當前頁面的URL路徑若有問題，則相對路徑會錯誤，不建議使用假設當前頁面URL為http://www.atguigu.com/course/h5.html        
 &emsp;&emsp;![image](https://github.com/csiemichelin/Node.js-Tutorial/blob/main/Images/URL%E4%B9%8B%E7%9B%B8%E5%B0%8D%E8%B7%AF%E5%BE%91.png)    
 最後一個例子是當處在最外層的目錄，就無法再往上一層了
-### 8. 設置資源類型 (mime類型)
+#### 8. 設置資源類型 (mime類型)
 mimi (Multipurpose Internet Mail Extensions) 類型為一種標準，用來表明文件, 字串等檔案格式  
 ```
 mime類型結構: [type]/[subType]
@@ -80,3 +81,9 @@ json: 'application/json'
 ```
 若遇到未知得資源類型，可以選擇使用application/octet-stream類型，瀏覽器在遇到該類型的響應時，會對響應體內容進行獨立儲存，也就是我們常見的下載
 ```
+### Modular design  
+#### 1. 模組化   
+將一個複雜的程式文件依據一定的規則，拆分成多個文件的過程稱為模組化，其中拆分成出的每個文件就是一個模組，而模組內部的數據是私有的，不過模組也可以暴露數據給其他模組使用，類似物件導向的概念但是是以文件去拆分，模組化帶來的好處:        
+1. 防止命名衝突   
+2. 高複雜性   
+3. 高維護性   
