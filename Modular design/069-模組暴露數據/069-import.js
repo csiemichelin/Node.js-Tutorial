@@ -2,4 +2,6 @@
 const ImportMoudle = require('./069-moudle.js');
 
 //呼叫函數
-ImportMoudle();
+console.log(ImportMoudle);
+// ImportMoudle.Moudle1();
+// ImportMoudle.Moudle2();
