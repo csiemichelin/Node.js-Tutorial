@@ -1,0 +1,1 @@
+module.exports = "我是一個app.js文件";

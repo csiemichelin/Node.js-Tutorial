@@ -1,0 +1,1 @@
+module.exports = "我是一個index.js文件";
