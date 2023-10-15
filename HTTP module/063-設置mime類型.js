@@ -10,30 +10,25 @@
 
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
+//宣告mime對應類型
+let mimies = {
+    html: 'text/html',
+    css: 'text/css',
+    js: 'text/javascript',
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    gif: 'image/gif',
+    mp4: 'video/mp4',
+    mp3: 'audio/mpeg',
+    json: 'application/json'
+}
 
 //新增server監聽器去監聽有沒有客戶端發來的請求，(request = 請求封包object, response = 響應封包object)
 const server = http.createServer((request, response) => {
     //因為請期會有css和js和html，所以要根據不同的請求，發送不同的響應
     //根據pathname區分
     let {pathname} = new URL(request.url, "http://127.0.0.1");
-    /** 但這樣每種文件都要新增一個，因此找出規律來解決
-    if (pathname == "/") {
-        //讀取HTML文件內容
-        let html = fs.readFileSync(__dirname + "/HTML/058-index.html");  //讀出來為buffer
-        response.end(html); //end參數可以是buffer，也可以是string
-    }  else if (pathname == "/CSS/058-app.css") {
-        //讀取CSS文件內容
-        let css = fs.readFileSync(__dirname + "/CSS/058-app.css");  //讀出來為buffer
-        response.end(css); //end參數可以是buffer，也可以是string
-    } else if (pathname == "/Images/058-mickey.png") {
-        //讀取JS文件內容
-        let img = fs.readFileSync(__dirname + "/Images/058-mickey.png");  //讀出來為buffer
-        response.end(img); //end參數可以是buffer，也可以是string
-    } else {
-        response.statusCode = 404;
-        response.end("<h1>404 not found</h1>");
-    }
-     */
     //拼接文件路徑
     let root = __dirname + "\\";   //網站根目錄
     //console.log(root);
@@ -45,6 +40,18 @@ const server = http.createServer((request, response) => {
             response.statusCode = 500;
             response.end("文件讀取失敗");
             return;
+        }
+        //response.setHeader("content-type", "xxx");  //此處不能寫死，可透過讀取副檔名來區分
+        //獲取文件的副檔名
+        let ext = path.extname(filepath).slice(1);  //.slice(1)是從下一個字元開始擷取，因為不需要副檔名的開頭.
+        //獲取文件對應的mime類型
+        let type = mimies[ext];
+        if (type) {
+            //有對應的mime類型
+            response.setHeader("content-type", type);
+        } else {
+            //沒有對應的mime類型
+            response.setHeader("content-type", "application/octet-stream");
         }
         //響應文件內容
         response.end(data);

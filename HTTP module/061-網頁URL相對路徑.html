@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 絕對路徑 -->
+    <a href="https://www.google.com">Google</a>
+    <a href="//github.com">Github</a> <!-- 會與所在頁面(瀏覽器客戶端)的HTTP協議進行URL的拼接，會先訪問http伺服器會再自動去跳轉到https -->
+    <a href="/search">搜索</a>  <!-- 會與所在頁面的HTTP協議, IP, PORT進行URL的拼接, 好處是IP或PORT更換不會受影響 -->
+    <hr />
+    <!-- 相對路徑 -->
+    <a href="./CSS/058-app.css">訪問CSS</a> <!-- 當前目錄 -->
+    <a href="HTML/058-index.html">訪問HTML</a>  <!-- 當前目錄 -->
+    <a href="../Images/URL之相對路徑.png">訪問圖片</a>  <!-- 上一層目錄 -->
+    <a href="../../Images/URL之相對路徑.png">訪問最外層圖片</a>  <!-- 最外層就是Vscode的專案目錄Nodejs-tutorial，所以再上一層頁沒用 -->
+</body>
+</html>
