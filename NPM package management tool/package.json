@@ -1,0 +1,11 @@
+{
+  "name": "npm-package-management-tool",
+  "version": "1.0.0",
+  "description": "學習npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
