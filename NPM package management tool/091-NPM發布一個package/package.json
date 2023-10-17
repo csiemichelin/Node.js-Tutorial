@@ -1,0 +1,14 @@
+{
+  "name": "michelin_math",
+  "version": "1.0.0",
+  "description": "",
+  "main": "091-index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "michelin_math": "^1.0.0"
+  }
+}

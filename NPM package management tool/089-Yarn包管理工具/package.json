@@ -1,0 +1,13 @@
+{
+  "name": "089-YarnPackageManagementTool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "node ./089-index.js"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "uniq": "^1.0.1"
+  }
+}
