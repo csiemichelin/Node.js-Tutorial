@@ -1,3 +1,4 @@
+//不要將node_modules中的東西，放到git會負擔很大，只需從gigt下載下來透過npm i，自動抓取package.json的所有依賴包即可
 // 1. 導入uniq包
 // const uniq = require("uniq"); //導入的是同個文件夾下node_modules中的uniq目錄
 // const uniq = require("./node_modules/uniq"); //導入的是文件夾，所以執行的是該目錄中，package.json中的main屬性所對應的文件uniq.js
