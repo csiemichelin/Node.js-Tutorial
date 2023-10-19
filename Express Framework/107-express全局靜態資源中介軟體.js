@@ -6,7 +6,7 @@ const express = require('express');
 // 創建應用對象
 const app = express();
 
-// 呼叫靜態資源中介函數 (會自動把mime類型補上)
+// 呼叫靜態資源全局中介函數 (會自動把mime類型補上)
 app.use(express.static(__dirname + '/STATIC'));
 
 // 創建路由 (決定來源端的請求，要送到哪個目的端，並執行目的端的響應回調函數)
