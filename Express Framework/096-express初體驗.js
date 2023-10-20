@@ -6,7 +6,7 @@ const express = require('express');
 // 2. 創建應用對象
 const app = express();
 
-// 3. 創建路由 (決定來源端的請求，要送到哪個目的端，並執行目的端的響應回調函數)
+// 3. 創建路由函數 (決定來源端的請求，要送到哪個目的端，並執行目的端的響應回調函數)
 app.get('/home', (req, res) => {
     res.end('Hello Express!');
 });
