@@ -8,7 +8,9 @@
 // 1. 安裝 EJS: npm i ejs (npm 安裝會自動找尋上層資料夾，裝到上層的node_module中)
 // 2. 導入 EJS
 const ejs = require('ejs');
+const fs = require('fs');
 
+/**
 // 測試字串
 let taiwan = '台灣';
 let str = `我愛你 ${taiwan}`;   //雖然可以這樣進行嵌入，則會偶合在一起，無法拆到不同文件
@@ -16,5 +18,12 @@ let str = `我愛你 ${taiwan}`;   //雖然可以這樣進行嵌入，則會偶�
 // 使用 ejs 渲染
 let ejsString = '我愛你 <%= taiwan %>';
 let result = ejs.render(ejsString, {taiwan: taiwan}); // <%=  %> 為 ejs 輸出表達式的語法
+ */
+
+// 使用 ejs 渲染
+let taiwan = '台灣';
+let weather = '今天天氣不錯';
+let ejsString = fs.readFileSync('./114-ejs.html').toString(); 
+let result = ejs.render(ejsString, {taiwan: taiwan, weather: weather}); // <%=  %> 為 ejs 輸出表達式的語法
 
 console.log(result);
