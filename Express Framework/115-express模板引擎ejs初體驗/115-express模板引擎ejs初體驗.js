@@ -23,7 +23,7 @@ let result = ejs.render(ejsString, {taiwan: taiwan}); // <%=  %> 為 ejs 輸出�
 // 使用 ejs 渲染
 let taiwan = '台灣';
 let weather = '今天天氣不錯';
-let ejsString = fs.readFileSync('./114-ejs.html').toString(); 
+let ejsString = fs.readFileSync('./115-ejs.html').toString(); 
 let result = ejs.render(ejsString, {taiwan: taiwan, weather: weather}); // <%=  %> 為 ejs 輸出表達式的語法
 
 console.log(result);
