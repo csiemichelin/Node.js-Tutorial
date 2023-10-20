@@ -9,7 +9,7 @@ const express = require('express');
 const app = express();
 
 // 呼叫靜態資源中介函數 (會自動把mime類型補上)
-app.use(express.static(__dirname + '/STATIC'));
+app.use(express.static(__dirname + '/public'));
 
 // 創建路由函數 (決定來源端的請求，要送到哪個目的端，並執行目的端的響應回調函數)
 app.get('/', (req, res) => {    //會與默認的資源中介函數發生衝突

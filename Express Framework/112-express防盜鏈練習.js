@@ -36,7 +36,7 @@ function HotlinkProtection(req, res, next) { // next是內部函數，此函數�
 app.use(HotlinkProtection);
 
 // 呼叫靜態資源全局中介函數 (會自動把mime類型補上)
-app.use(express.static(__dirname + '/STATIC'));
+app.use(express.static(__dirname + '/public'));
 
 // 監聽端口，啟動服務
 app.listen(3000, (req, res) => {
