@@ -12,7 +12,7 @@ const app = express();
 //     res.end('商品詳情');
 // });
 app.get('/:ProductID.html', (req, res) => {   
-    console.log(req.params.ProductID);  //獲取URL路由參數(才能做不同的響應)
+    console.log(rams.ProductID);  //獲取URL路由參數(才能做不同的響應)
     res.setHeader('content-type', 'text/html;charset=utf-8');
     res.end('商品詳情');
 });

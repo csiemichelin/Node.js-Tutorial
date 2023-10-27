@@ -28,39 +28,27 @@
           <h2>記賬本</h2>
           <hr />
           <div class="accounts">
-            <div class="panel panel-danger">
-              <div class="panel-heading">2023-04-05</div>
-              <div class="panel-body">
-                <div class="col-xs-6">糖豆人，飲料消費</div>
-                <div class="col-xs-2 text-center">
-                  <span class="label label-warning">支出</span>
-                </div>
-                <div class="col-xs-2 text-right">325 元</div>
-                <div class="col-xs-2 text-right">
-                  <span
-                    class="glyphicon glyphicon-remove"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-success">
-              <div class="panel-heading">2023-04-15</div>
-              <div class="panel-body">
-                <div class="col-xs-6">3 月份發工資</div>
-                <div class="col-xs-2 text-center">
-                  <span class="label label-success">收入</span>
-                </div>
-                <div class="col-xs-2 text-right">54396 元</div>
-                <div class="col-xs-2 text-right">
-                  <span
-                    class="glyphicon glyphicon-remove"
-                    aria-hidden="true"
-                  ></span>
+            <!-- 參考116-express模板引擎ejs列表渲染.js -->
+            <% accounts.forEach(item => { %>
+              <div class="panel <%= item.type==1 ? 'panel-success' : 'panel-danger' %>">
+                <div class="panel-heading"><%= item.time %></div>
+                <div class="panel-body">
+                  <div class="col-xs-6"><%= item.remarks %></div>
+                  <div class="col-xs-2 text-center">
+                    <span class="label <%= item.type==1 ? 'label-success' : 'label-warning' %>"><%= item.type==1 ? '收入' : '支出' %> </span>
+                  </div>
+                  <div class="col-xs-2 text-right"><%= item.account %> 元</div>
+                  <div class="col-xs-2 text-right">
+                    <a href="/account/<%= item.id %>">
+                      <span
+                        class="glyphicon glyphicon-remove"
+                        aria-hidden="true"
+                      ></span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            
+            <% }) %>
           </div>
         </div>
       </div>
