@@ -1,0 +1,14 @@
+{
+  "name": "mongoose-mongodb-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "137-mongoose連接數據庫.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.6.3"
+  }
+}
