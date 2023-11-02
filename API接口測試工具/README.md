@@ -13,3 +13,6 @@
 * 操作資源類型要與HTTP請求方法對應
 * 操作結果要與與HTTP響應狀態碼對應
 
+3. json-server
+* 是一個JS編寫的工具包，可透過npm進行安裝，可以快速搭建RESTful API服務
+$ npm i -g json-server 
