@@ -1,0 +1,75 @@
+<!-- 引入的靜態資源檔案，ex:css.js...，資料夾要放在 public 資料夾下，因為 app.js 中有設置靜態中介函數-->
+<!-- 採納 HTTP module/061-網頁URL相對路徑.html 不能寫相對路徑./，不然會受當前目錄URL影響 -->
+<!-- 要採用絕對路徑，這樣就只會與所在頁面的HTTP協議, IP, PORT進行URL的拼接, 好處是IP或PORT更換不會受影響 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>添加記錄</title>
+    <link
+      href="/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <link href="/css/bootstrap-datepicker.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+          <h2>添加記錄</h2>
+          <hr />
+          <form method="post" action="/account">  <!-- 相當於http://127.0.0.1:3000/account -->
+            <div class="form-group">
+              <label for="item">事項</label>
+              <input
+                name="title"
+                type="text"
+                class="form-control"
+                id="item"
+              />
+            </div>
+            <div class="form-group">
+              <label for="time">發生時間</label>
+              <input
+                name="time"
+                type="text"
+                class="form-control"
+                id="time"
+              />
+            </div>
+            <div class="form-group">
+              <label for="type">類型</label>
+              <select name="type" class="form-control" id="type">
+                <option value="-1">支出</option>
+                <option value="1">收入</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="account">金額</label>
+              <input
+                name="account"
+                type="text"
+                class="form-control"
+                id="account"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="remarks">備註</label>
+              <textarea name="remarks" class="form-control" id="remarks"></textarea>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary btn-block">添加</button>
+          </form
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-datepicker.min.js"></script>
+    <script src="/js/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
