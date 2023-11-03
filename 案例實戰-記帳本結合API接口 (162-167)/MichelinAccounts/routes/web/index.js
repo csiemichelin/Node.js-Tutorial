@@ -3,7 +3,7 @@ var router = express.Router();
 
 // 導入momment
 const moment = require('moment');
-const AccountModel = require('../modules/AccountModel');
+const AccountModel = require('../../modules/AccountModel');
 // 測試
 console.log(moment('2023-02-24').toDate());
 // 格式化日期對象
