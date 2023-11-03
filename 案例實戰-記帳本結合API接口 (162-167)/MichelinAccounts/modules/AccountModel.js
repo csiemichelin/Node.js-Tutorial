@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 let AccountSchema = new mongoose.Schema({
     // 標題
     title: {
-        type: 'string',
+        type: String,
         required: true,
     },
     // 時間
