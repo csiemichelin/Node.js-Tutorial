@@ -1,0 +1,28 @@
+{
+  "accounts": [
+    {
+      "id": "BxtJwPxQn",
+      "title": "飲料",
+      "time": "2023-10-27",
+      "type": "-1",
+      "account": "30",
+      "remarks": "ITRI珍奶"
+    },
+    {
+      "id": "PLccIt7r6",
+      "title": "午餐",
+      "time": "2023-10-27",
+      "type": "-1",
+      "account": "55",
+      "remarks": "ITRI便當"
+    },
+    {
+      "id": "ermBFW6hH",
+      "title": "薪資",
+      "time": "2023-10-27",
+      "type": "1",
+      "account": "57000",
+      "remarks": "終於發薪水惹"
+    }
+  ]
+}
