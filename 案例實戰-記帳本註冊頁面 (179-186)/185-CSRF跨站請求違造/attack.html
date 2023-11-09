@@ -1,0 +1,16 @@
+<!--
+  CRSF就是透過不同的網站去向該網站發送請求，然後又因為都是同個瀏覽器，因此cookie會帶相同的sessionID
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF 演示</title>
+  <!--因為帶相同的sessionID所以伺服器會將其視為登入並跳轉logout執行GET路由函數，解決方式把該路由函數設置成POST-->
+  <link rel="stylesheet" href="http://127.0.0.1:3000/logout">
+</head>
+<body>
+</body>
+</html>

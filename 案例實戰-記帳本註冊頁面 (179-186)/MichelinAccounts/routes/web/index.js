@@ -1,17 +1,24 @@
-var express = require('express');
-var router = express.Router();
-
+// 導入express
+const express = require('express');
 // 導入momment
 const moment = require('moment');
+// 導入帳單列表模型
 const AccountModel = require('../../modules/AccountModel');
-// 測試
-console.log(moment('2023-02-24').toDate());
-// 格式化日期對象
-console.log(moment(new Date()).format('YYYY-MM-DD'));
+// 導入中介函數
+const checkLoginMiddleware = require('../../middlewares/checkLoginMiddleware');
+
+//創建路由對象
+const router = express.Router();
+
+// 添加首頁路由函數
+router.get('/', (req, res) => {
+  // 重定向account，若使用者沒有登入直接訪問首頁，則會在跳轉/account時，被checkLoginMiddleware中介函數發現，最後跳轉到/login
+  res.redirect('/account');
+});
 
 /* GET home page. */
 // 記帳本列表表單
-router.get('/', function (req, res, next) {
+router.get('/account', checkLoginMiddleware, function (req, res, next) {
   // 獲取所有的帳單訊息
   // let accounts = db.get('accounts').value();
   // 讀取集合信息
@@ -26,12 +33,12 @@ router.get('/', function (req, res, next) {
 });
 
 // 添加紀錄
-router.get('/create', function (req, res, next) {
+router.get('/account/create', checkLoginMiddleware, function (req, res, next) {
   res.render('account/create');
 });
 
 // 新增紀錄
-router.post('/', function (req, res, next) {
+router.post('/account', checkLoginMiddleware, function (req, res, next) {
   // 獲取請求體數據 日期為字串 => new Date()
   // 轉換步驟: "2023-02-24" => Object => new Date() // 透過momment包實現
   // console.log(req.body);  // 參考 110-express獲取請求體body數據.js，但這邊不用添加中介函數，因為外層 app.js(#17 & #18)，已經把其設成全局中介函數了
@@ -48,7 +55,7 @@ router.post('/', function (req, res, next) {
 });
 
 // 刪除紀錄 (透過路由參數id的方式)
-router.get('/:id', (req, res) => {
+router.get('/account/:id', checkLoginMiddleware, (req, res) => {
   // 獲取路由參數id (參考100-express獲取路由參數.js)
   let id = req.params.id;
   // 刪除
