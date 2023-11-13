@@ -52,7 +52,6 @@ router.post('/login', (req, res) => {
             return;
         } 
         // 判斷data
-         console.log(data.username);
         if (!data) {
             return res.send('帳號密碼錯誤~~~');
         }

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "//": "nodemon通常開發用",
+    "start": "nodemon ./bin/www",
+    "server": "node ./bin/www"
   },
   "dependencies": {
     "connect-mongo": "^5.1.0",

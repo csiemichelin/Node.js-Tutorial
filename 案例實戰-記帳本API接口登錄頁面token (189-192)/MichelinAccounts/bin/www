@@ -1,6 +1,8 @@
 #!/usr/bin/env node
+
 // 導入db函數 (mongoose)
 const db = require('../db/db');
+const fs = require('fs');
 
 // 呼叫db函數
 db(() => {  // 代表數據庫服務成功連接後，再去啟動http服務 (數據庫連接不上，後面的服務啟動都沒有意義)
@@ -11,6 +13,8 @@ db(() => {  // 代表數據庫服務成功連接後，再去啟動http服務 (�
   var app = require('../app');
   var debug = require('debug')('michelinaccounts:server');
   var http = require('http');
+  // 導入https
+  const https = require('https');
 
   /**
    * Get port from environment and store in Express.
@@ -18,22 +22,30 @@ db(() => {  // 代表數據庫服務成功連接後，再去啟動http服務 (�
 
   // var port = normalizePort(process.env.PORT || '3000');
   // port 80為瀏覽器預設，這樣就不用打port了
-  var port = normalizePort(process.env.PORT || '80'); 
+  var port = normalizePort(process.env.PORT || '80');
   app.set('port', port);
 
   /**
    * Create HTTP server.
    */
 
-  var server = http.createServer(app);
+  var serverHttps = https.createServer({
+    key: fs.readFileSync('C:\\Users\\User\\OneDrive - ITRI\\Documents\\憑證\\server.pem'),
+    cer: fs.readFileSync('C:\\Users\\User\\OneDrive - ITRI\\Documents\\憑證\\cert.pem'),
+    ca: fs.readFileSync('C:\\Users\\User\\OneDrive - ITRI\\Documents\\憑證\\rootCA.pem')
+  }, app);
+  var serverHttp = http.createServer(app);
 
   /**
    * Listen on provided port, on all network interfaces.
    */
+  serverHttps.listen(443);
+  serverHttps.on('error', onError);
+  serverHttps.on('listening', onListening);
 
-  server.listen(port);
-  server.on('error', onError);
-  server.on('listening', onListening);
+  serverHttp.listen(port);
+  serverHttp.on('error', onError);
+  serverHttp.on('listening', onListening);
 
   /**
    * Normalize a port into a number, string, or false.
@@ -88,7 +100,7 @@ db(() => {  // 代表數據庫服務成功連接後，再去啟動http服務 (�
    */
 
   function onListening() {
-    var addr = server.address();
+    var addr = serverHttp.address();
     var bind = typeof addr === 'string'
       ? 'pipe ' + addr
       : 'port ' + addr.port;
