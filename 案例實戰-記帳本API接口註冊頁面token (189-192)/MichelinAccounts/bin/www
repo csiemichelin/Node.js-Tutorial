@@ -16,7 +16,9 @@ db(() => {  // 代表數據庫服務成功連接後，再去啟動http服務 (�
    * Get port from environment and store in Express.
    */
 
-  var port = normalizePort(process.env.PORT || '3000');
+  // var port = normalizePort(process.env.PORT || '3000');
+  // port 80為瀏覽器預設，這樣就不用打port了
+  var port = normalizePort(process.env.PORT || '80'); 
   app.set('port', port);
 
   /**

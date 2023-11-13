@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
 //3. 連接 mongodb 服務                        數據庫的名稱
-mongoose.connect('mongodb://127.0.0.1:27017/michelin');
+mongoose.connect('mongodb://127.0.0.1:27017/michelin', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //4. 設置回調
 // 設置連接成功的回調  once 一次   事件回調函數只執行一次

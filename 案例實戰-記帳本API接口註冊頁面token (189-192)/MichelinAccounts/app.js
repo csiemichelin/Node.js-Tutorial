@@ -4,12 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// 導入index(account)路由文件
 var indexRouter = require('./routes/web/index');
-// var usersRouter = require('./routes/users');
 // 導入account接口路由文件
 const accountRouter = require('./routes/api/account');
 // 導入login註冊路由文件
 const loginRouter = require('./routes/web/verify');
+// 導入login接口路由文件
+const loginApiRouter = require('./routes/api/verify');
 // 導入express-session connect-mongo
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
@@ -49,6 +51,7 @@ app.use('/', loginRouter);
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/api', accountRouter);
+app.use('/api/', loginApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

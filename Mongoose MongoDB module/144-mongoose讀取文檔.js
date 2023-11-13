@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
 // 3. 連接 mongodb服務                       數據庫名稱(若不存在則自動創建)                                    
-mongoose.connect('mongodb://127.0.0.1:27017/michelin');
+mongoose.connect('mongodb://127.0.0.1:27017/michelin', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // 4. 設置回調函數
 // 設置連結成功的回調，不用on用once，讓事件回調函數只執行一次

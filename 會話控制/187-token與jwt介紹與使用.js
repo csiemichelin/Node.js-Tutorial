@@ -18,7 +18,7 @@ const jwt = require('jsonwebtoken');
 // let token = jwt.sign(用戶數據, 加密字符串, 配置對像(e.g 生命週期)); 
 // let token = jwt.sign({
 //     username: 'michelin'
-// }, 'atguigu'    // 設置private key對cookie做加密) 
+// }, 'atguigu'    // 設置private key對cookie做加密
 // , {
 //     expiresIn: 60, // 生命週期單位是秒 (此為1分鐘)
 // });

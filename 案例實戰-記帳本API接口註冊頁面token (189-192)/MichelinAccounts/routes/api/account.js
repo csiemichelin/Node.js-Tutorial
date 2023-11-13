@@ -2,6 +2,11 @@
 const express = require('express');
 // 導入momment
 const moment = require('moment');
+// 導入jwt
+const jwt = require('jsonwebtoken');
+
+// 導入中介函數
+const checkTokenMiddleware = require('../../middlewares/checkTokenMiddleware');
 // 導入帳單列表模型
 const AccountModel = require('../../modules/AccountModel');
 
@@ -10,7 +15,7 @@ const router = express.Router();
 
 /* GET home page. */
 // 記帳本列表表單
-router.get('/account', function (req, res, next) {
+router.get('/account', checkTokenMiddleware, function (req, res, next) {
     // 獲取所有的帳單訊息
     // 讀取集合信息
     AccountModel.find().sort({ time: -1 }).exec((err, data) => {
@@ -43,7 +48,7 @@ router.get('/account', function (req, res, next) {
 // });
 
 // 新增紀錄
-router.post('/account', function (req, res, next) {
+router.post('/account', checkTokenMiddleware, function (req, res, next) {
     // 表單驗證
     if (!req.body.title || typeof req.body.title !== 'string') {
         res.json({
@@ -104,7 +109,7 @@ router.post('/account', function (req, res, next) {
 });
 
 // 刪除紀錄 (透過路由參數id的方式)
-router.delete('/account/:id', (req, res) => {
+router.delete('/account/:id', checkTokenMiddleware, (req, res) => {
     // 獲取路由參數id (參考100-express獲取路由參數.js)
     let id = req.params.id;
     // 刪除
@@ -128,7 +133,7 @@ router.delete('/account/:id', (req, res) => {
 });
 
 // 獲取單個帳單信息
-router.get('/account/:id', (req, res) => {
+router.get('/account/:id', checkTokenMiddleware, (req, res) => {
     // 獲取路由參數id
     let id = req.params.id;
 
@@ -137,6 +142,15 @@ router.get('/account/:id', (req, res) => {
             res.json({
                 code: '1008',
                 msg: '讀取失敗~~~',
+                data: null
+            });
+            return;
+        } 
+        if (!data) {
+            // 沒有匹配的文檔，id長度一樣，但該id不存在，則findById會回傳但data為null值
+            res.json({
+                code: '1008',
+                msg: '未找到匹配的帳單信息~~~',
                 data: null
             });
             return;
@@ -150,7 +164,7 @@ router.get('/account/:id', (req, res) => {
 });
 
 // 更新單個帳單信息
-router.patch('/account/:id', (req, res) => {
+router.patch('/account/:id', checkTokenMiddleware, (req, res) => {
     // 獲取路由參數id
     let id = req.params.id;
 
@@ -163,7 +177,7 @@ router.patch('/account/:id', (req, res) => {
             });
         }
         // 再次查詢數據庫，獲取單條數據 (updateOne回傳的data不是該條數據)
-        AccountModel.findById({ _id: id}, (err, data) => {
+        AccountModel.findById({ _id: id }, (err, data) => {
             // 設置響應
             if (err) {
                 res.json({
@@ -179,7 +193,7 @@ router.patch('/account/:id', (req, res) => {
                 data: data
             });
         });
-        
+
     });
 });
 
