@@ -1,7 +1,15 @@
 # Node.js-Tutorial
 這裡是自學Node.js後端技術的小小天地
 ## 前言
-Node.js是一款開發Server後端很重要的應用程式，可以在上面跑JavaScript的程式   
+Node.js是一款開發Server後端很重要的應用程式，可以在上面跑JavaScript的程式，此專案設計一個記帳系統，具備以下功能:  
+1. WEB端
+&emsp; * 記帳本基礎頁面     
+&emsp; * 結合MongoDB數據庫  
+&emsp; * 註冊頁面Cookie-Sesssion驗證功能    
+2. API端
+&emsp; * 記帳本Restful API返回JSON  
+&emsp; * 結合MongoDB數據庫
+&emsp; * 登錄頁面Token校驗功能      
 ## 環境建置
 1. [安裝Node.js](https://nodejs.org/en)  
 &emsp; * 默認安裝即可  
