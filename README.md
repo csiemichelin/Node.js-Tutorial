@@ -5,8 +5,8 @@ Node.js是一款開發Server後端很重要的應用程式，可以在上面跑J
 1. WEB端   
 &emsp; * 記帳本基礎頁面      
 &emsp; * 結合MongoDB數據庫   
-&emsp; * 註冊頁面Cookie-Sesssion驗證功能
-&emsp; * 對應網域和Https
+&emsp; * 註冊頁面Cookie-Sesssion驗證功能   
+&emsp; * 對應網域和HTTPS
 3. API端    
 &emsp; * 記帳本Restful API返回JSON  
 &emsp; * 結合MongoDB數據庫  
