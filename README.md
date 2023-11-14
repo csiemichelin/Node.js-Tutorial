@@ -129,11 +129,20 @@ Headers記得手動添加，用戶登錄時回傳的token值，此外URL中的id
 2. 獲取失敗
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/ba32fde1-168b-4d70-ba99-f66cece43e03)  
 ### 創建新帳單   
-Headers記得手動添加，用戶登錄時回傳的token值，此外request body填入鑰添加的值   
+Headers記得手動添加，用戶登錄時回傳的token值，此外request body填入要添加的值   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/f25befa4-7b59-44ed-9ada-192859e7dd70)  
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/86557a78-e62f-48d4-b865-d6e6dd35bfbe)  
 ### 更新單個帳單  
+Headers記得手動添加，用戶登錄時回傳的token值，此外request body填入要部分修改的值   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/014ed6f5-591b-4c21-a66b-99df4fa51741)
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/5ee66800-5025-43f7-8b96-53bf4b1a14e2)  
 ### 刪除帳單  
+1. 刪除成功   
+Headers記得手動添加，用戶登錄時回傳的token值，此外URL中的id，可由獲取帳單列表的response body得出   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/5f0ce7e4-f2dc-4e6c-9bbd-1528c1e7cfee)
+2. 刪除失敗
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/61a8ec86-8f1b-467b-96a4-03b5b8e8c499)
+
 ## 網頁基本知識   
 參考課程教材   
 
