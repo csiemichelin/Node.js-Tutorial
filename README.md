@@ -88,17 +88,17 @@ DB: michelin & Collections: users，產生test帳號的資訊
 顯示所有記帳本列表，點擊右上角紅色退出按鈕可以回到登錄頁面，點擊藍色添加帳單按鈕，開始記帳
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/07e947dd-6c44-4075-a3ef-b20563e01fa9)  
 2. 添加帳單   
-&emsp;(1) WEB端   
+(1) WEB端   
 跳轉至添加紀錄的頁面，可以依序填入事項、發生時間、類型(支出/收入)、金額、備註，最後點擊添加   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/f53fb84b-caba-4027-af80-d1f77378f517)
 顯示登入成功喔介面，點擊跳轉可以進入記帳本列表介面    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/264e58ed-739f-4bc0-9069-1b330a0a3818)  
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/a9f13b58-d8ad-4081-a4f6-687d772127c5)
-&emsp;(2) MongoDB端   
+(2) MongoDB端   
 DB: michelin & Collections: accounts，產生早餐的資訊   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/5e092a8c-9789-4b32-9e26-f76dd803f185)  
 3. 刪除帳單    
-&emsp;(1) WEB端   
+(1) WEB端   
 進入記帳本頁面，點擊想要刪除事項的右邊紅色框的地方   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/22d8f5e9-4a44-481e-bb3b-2ab1ac440bbc)
 顯示是否要刪除的提示訊息，點擊確定
@@ -106,7 +106,7 @@ DB: michelin & Collections: accounts，產生早餐的資訊
 顯示成功喔介面，點擊跳轉可以進入記帳本列表介面   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/961d4ecd-71f4-4a79-91f2-6c4f92561472)  
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/a5ebb28c-b61e-46b2-abd0-a619b25a37e0)  
-&emsp;(2) MongoDB端
+(2) MongoDB端   
 DB: michelin & Collections: accounts，早餐資訊已被刪除     
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/2b0a9efa-35fe-4029-99a2-afe3c5f111ec)
 
