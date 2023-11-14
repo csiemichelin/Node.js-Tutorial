@@ -111,7 +111,7 @@ DB: michelin & Collections: accounts，早餐資訊已被刪除
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/2b0a9efa-35fe-4029-99a2-afe3c5f111ec)
 
 ## 記帳本API端  
-點開Postman，新增Globla變數   
+點開Postman，新增Global變數   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/b7ef820d-2de2-4ca5-b16c-781bc8f98789)
 ### 用戶的登錄  
 1. 登錄成功   
