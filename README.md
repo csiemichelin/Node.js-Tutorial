@@ -63,6 +63,17 @@ nvm use 20.4.0  //進行Node.js的版本切換
 若要多行註解可以ctrl+／    
 
 ## 記帳本WEB端   
+### 註冊介面
+1. WEB   
+輸入帳密，點擊註冊   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/8915ce06-3fc9-4880-825c-9be5d66aa84b)
+顯示註冊成功提示介面，點擊跳轉可以進入登錄介面     
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/90e6aa64-54d2-40a5-a1a1-356b2d1cd6c6)
+2. MongoDB  
+DB: michelin & Collections: users，產生test帳號的資訊         
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/7312ac34-559e-4ee9-9e32-54c3fd53307b)
+### 登入介面
+
 ## 記帳本API端  
 ## 網頁基本知識   
 參考課程教材   
