@@ -76,11 +76,31 @@ DB: michelin & Collections: users，產生test帳號的資訊
 1. 登錄成功
 輸入帳密，點擊登錄    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/d73636ff-4f28-402c-9f65-7884f7e6bd0e)
-顯示登錄成功提示介面，點擊跳轉可以進入記帳列表       
+顯示登錄成功提示介面，點擊跳轉可以進入記帳本列表       
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/4bebb1f7-803b-439a-ad0a-91986f8afa34)   
 3. 登錄失敗
-輸入錯誤帳密，點擊登錄    
-![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/9d960066-4487-4654-8b57-de90c2b54910)
+輸入錯誤帳密，點擊登錄     
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/9d960066-4487-4654-8b57-de90c2b54910)   
+顯示帳號密碼錯誤提示頁面   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/f45b0e5d-5cc3-4b59-9a1f-ba9c9373e68b)   
+### 記帳本頁面  
+1. 記帳本列表   
+顯示所有記帳本列表，點擊右上角紅色退出按鈕可以回到登錄頁面，點擊藍色添加帳單按鈕，開始記帳
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/07e947dd-6c44-4075-a3ef-b20563e01fa9)  
+2. 添加帳單   
+跳轉至添加紀錄的頁面，可以依序填入事項、發生時間、類型(支出/收入)、金額、備註，最後點擊添加   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/f53fb84b-caba-4027-af80-d1f77378f517)
+顯示登入成功喔介面，點擊跳轉可以進入記帳本列表介面    
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/264e58ed-739f-4bc0-9069-1b330a0a3818)  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/a9f13b58-d8ad-4081-a4f6-687d772127c5)  
+3. 刪除帳單   
+進入記帳本頁面，點擊想要刪除事項的右邊紅色框的地方   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/22d8f5e9-4a44-481e-bb3b-2ab1ac440bbc)
+顯示是否要刪除的提示訊息，點擊確定
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/17c7c88a-4d32-4962-b49c-bb423913566e)   
+顯示成功喔介面，點擊跳轉可以進入記帳本列表介面   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/961d4ecd-71f4-4a79-91f2-6c4f92561472)  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/a5ebb28c-b61e-46b2-abd0-a619b25a37e0)  
 
 ## 記帳本API端  
 ## 網頁基本知識   
