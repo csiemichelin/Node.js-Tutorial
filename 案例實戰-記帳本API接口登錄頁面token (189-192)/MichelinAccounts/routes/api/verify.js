@@ -1,5 +1,7 @@
 // 導入express
 const express = require('express');
+// 導入jwt
+const jwt = require('jsonwebtoken');
 // 導入用戶模型
 const UserModel = require('../../modules/UserModel');
 const md5 = require('md5'); // 用來加密密碼(此為單向加密，無法將處理後的數據恢復為原始數據(無法解密))
