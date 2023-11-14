@@ -111,6 +111,29 @@ DB: michelin & Collections: accounts，早餐資訊已被刪除
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/2b0a9efa-35fe-4029-99a2-afe3c5f111ec)
 
 ## 記帳本API端  
+點開Postman，新增Globla變數   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/b7ef820d-2de2-4ca5-b16c-781bc8f98789)
+### 用戶的登錄  
+1. 登錄成功   
+response body會產生token，複製該token  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/9d01e1b4-87d9-4b8c-82cf-768dfac05bf0)
+2. 登錄失敗
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/3c925888-f0ab-4e8f-bcb5-aa302aeb2d6b)
+### 獲取帳單列表  
+Headers記得手動添加，用戶登錄時回傳的token值  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/39be5286-fbdb-4652-8e63-a9f5162a1a99)  
+### 獲取單條帳單   
+1. 獲取成功   
+Headers記得手動添加，用戶登錄時回傳的token值，此外URL中的id，可由獲取帳單列表的response body得出   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/dfa2b530-f7ad-4071-8ca2-a7516ad822e3)
+2. 獲取失敗
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/ba32fde1-168b-4d70-ba99-f66cece43e03)  
+### 創建新帳單   
+Headers記得手動添加，用戶登錄時回傳的token值，此外request body填入鑰添加的值   
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/f25befa4-7b59-44ed-9ada-192859e7dd70)  
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/86557a78-e62f-48d4-b865-d6e6dd35bfbe)  
+### 更新單個帳單  
+### 刪除帳單  
 ## 網頁基本知識   
 參考課程教材   
 
