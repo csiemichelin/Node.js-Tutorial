@@ -72,7 +72,15 @@ nvm use 20.4.0  //進行Node.js的版本切換
 2. MongoDB  
 DB: michelin & Collections: users，產生test帳號的資訊         
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/7312ac34-559e-4ee9-9e32-54c3fd53307b)
-### 登入介面
+### 登錄介面
+1. 登錄成功
+輸入帳密，點擊登錄    
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/d73636ff-4f28-402c-9f65-7884f7e6bd0e)
+顯示登錄成功提示介面，點擊跳轉可以進入記帳列表       
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/4bebb1f7-803b-439a-ad0a-91986f8afa34)   
+3. 登錄失敗
+輸入錯誤帳密，點擊登錄    
+![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/9d960066-4487-4654-8b57-de90c2b54910)
 
 ## 記帳本API端  
 ## 網頁基本知識   
