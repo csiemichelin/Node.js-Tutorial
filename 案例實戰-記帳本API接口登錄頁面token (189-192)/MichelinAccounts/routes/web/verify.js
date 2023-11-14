@@ -23,34 +23,47 @@ router.post('/reg', (req, res) => {
         res.status(301).send('301 密碼輸入格式錯誤~~~');
         return;
     }
-    // 獲取請求體的數據
-    // console.log(req.body);
-    UserModel.create({...req.body, password: md5(req.body.password)}, (err, data) => {
+    // 查詢數據庫檢查是否註冊過
+    UserModel.findOne({ username: req.body.username}, (err, data) => {
         if (err) {
-            res.status(500).send('註冊失敗，請稍後在試~~~');
+            res.status(500).send('資料庫錯誤，請稍後在試~~~');
             return;
-        } 
-        res.render('option/success', {msg: '註冊成功', url: '/login'}); // 註冊好要網登錄頁面跳轉
+        }
+        // 判斷是否沒有使用者，若沒有則創建
+        if (!data) {
+            // 獲取請求體的數據
+            // console.log(req.body);
+            UserModel.create({ ...req.body, password: md5(req.body.password) }, (err, data) => {
+                if (err) {
+                    res.status(500).send('註冊失敗，請稍後在試~~~');
+                    return;
+                }
+                return res.render('option/success', { msg: '註冊成功', url: '/login' }); // 註冊好要網登錄頁面跳轉
+            });
+        } else {    // 使用者已存在
+            res.status(500).send('此帳號已經註冊過囉~~~');
+        }
     });
+
 });
 
 // 登錄頁面
 router.get('/login', (req, res) => {
     // 響應HTML內容
-    res.render('verify/login');    
+    res.render('verify/login');
 });
 
 // 登錄操作
 router.post('/login', (req, res) => {
     // 獲取用戶名和密碼
-    let {username, password} = req.body;
+    let { username, password } = req.body;
     // 查詢數據庫 (密碼數據庫中是加密過的，比對前要先將登錄密碼先做加密)
-    UserModel.findOne({username: username, password: md5(password)}, (err, data) => {
+    UserModel.findOne({ username: username, password: md5(password) }, (err, data) => {
         // 判斷
         if (err) {
             res.status(500).send('登錄失敗，請稍後在試~~~');
             return;
-        } 
+        }
         // 判斷data
         if (!data) {
             return res.send('帳號密碼錯誤~~~');
@@ -60,7 +73,7 @@ router.post('/login', (req, res) => {
         req.session._id = data._id; // 不是sessionID，而是數據庫的ID
 
         // 登錄成功響應
-        res.render('option/success', {msg: '登錄成功', url: '/account'});
+        res.render('option/success', { msg: '登錄成功', url: '/account' });
     });
     // 響應HTML內容
     // res.render('verify/login');    
@@ -71,7 +84,7 @@ router.post('/login', (req, res) => {
 router.post('/logout', (req, res) => {
     // 銷毀session
     req.session.destroy(() => {
-        res.render('option/success', {msg: '退出成功', url: '/login'});    
+        res.render('option/success', { msg: '退出成功', url: '/login' });
     });
 });
 
