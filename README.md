@@ -73,12 +73,12 @@ nvm use 20.4.0  //進行Node.js的版本切換
 DB: michelin & Collections: users，產生test帳號的資訊         
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/7312ac34-559e-4ee9-9e32-54c3fd53307b)
 ### 登錄介面
-1. 登錄成功
+1. 登錄成功    
 輸入帳密，點擊登錄    
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/d73636ff-4f28-402c-9f65-7884f7e6bd0e)
 顯示登錄成功提示介面，點擊跳轉可以進入記帳本列表       
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/4bebb1f7-803b-439a-ad0a-91986f8afa34)   
-3. 登錄失敗
+3. 登錄失敗   
 輸入錯誤帳密，點擊登錄     
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/9d960066-4487-4654-8b57-de90c2b54910)   
 顯示帳號密碼錯誤提示頁面   
@@ -97,7 +97,7 @@ DB: michelin & Collections: users，產生test帳號的資訊
 &emsp;(2) MongoDB端   
 DB: michelin & Collections: accounts，產生早餐的資訊   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/5e092a8c-9789-4b32-9e26-f76dd803f185)  
-4. 刪除帳單
+3. 刪除帳單    
 &emsp;(1) WEB端   
 進入記帳本頁面，點擊想要刪除事項的右邊紅色框的地方   
 ![image](https://github.com/csiemichelin/Node.js-Tutorial/assets/49907717/22d8f5e9-4a44-481e-bb3b-2ab1ac440bbc)
